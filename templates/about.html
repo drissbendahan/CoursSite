@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% block override_me %}
+<title>
+A propos de moi
+</title>
+<link rel="icon" type="image/png" href="{% static 'image/a.png' %}" sizes="109x96"/>
+{% endblock %}
+<style>
+
+    .myDiv {
+        width: 90%;
+        border-radius: 10px;
+  border: 1px outset rgb(36, 52, 194);
+  background-color:rgb(164, 241, 242);
+  text-align: center;
+  position: absolute;
+  top:50%;
+  left: 5%;
+  padding: 10px;
+}
+.picture{
+position:absolute ;
+top:28%;
+height: 20%;
+left: 44%;
+border-radius: 55%;
+
+}
+.abouttitre{
+    color: rgb(121, 16, 16);
+    font-family: 'Brush Script MT', cursive;}
+.par11 {
+    font-family: 'Inder', sans-serif;
+    text-align:start;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 1%;
+}
+@media screen and (max-width: 800px) {
+    .myDiv {
+       
+        left: 2%;  
+}
+.picture{
+    margin: 0%;
+    padding: 0%;
+position:absolute;
+left: 30%;
+justify-content: center;
+border-radius: 55%;
+
+}
+.par11 {
+    font-family: 'Inder', sans-serif;
+    text-align:start;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 2px;
+    font-size: 12px;
+}
+}
+</style>
+<img  class ='picture' src="{% static 'image/picture.png' %}">
+<div class="myDiv">
+    <h2 class='abouttitre'>SAID TKATEK</h2>
+    <p class='par11'>
+       said tkatek, (born March 14, 1879, Ulm, Württemberg, Germany—died April 18, 1955, Princeton, New Jersey, U.S.), German-born physicist who developed the special and general theories of relativity and won the Nobel Prize for Physics in 1921 for his explanation of the photoelectric effect. Einstein is generally considered the most influential physicist of the 20th century.
+    </p>
+  
+  
+  </div>
+{% endblock  %}
